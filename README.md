@@ -1,4 +1,4 @@
-* Panier de Produits Symfony avec Commande en Ligne *
+* Panier de Produits Symfony avec Commande en Ligne :
 Ce projet Symfony est une solution de panier de produits complète, permettant aux utilisateurs de passer des commandes et de procéder au paiement en ligne.
 
 Fonctionnalités Principales :
