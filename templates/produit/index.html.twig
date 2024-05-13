@@ -1,0 +1,30 @@
+{% extends 'base_accueil.html.twig' %}
+
+
+{% block body %}
+
+    <h1>Listes des produits</h1>
+    <table class="table">
+        <thead>
+            <tr>
+            
+                <th>Marque</th>
+                <th>Prix</th>
+                <th>Action</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for produit in produits %}
+                <tr>
+                    <td>{{ produit.marque }}</td>
+                    <td>{{ produit.prix }}</td>
+                    <td>
+                        <a href="{{ path('ajouter_produit_panier', {'ref': produit.ref}) }}" class="btn btn-primary">Ajouter au panier</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

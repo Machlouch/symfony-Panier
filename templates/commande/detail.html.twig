@@ -1,0 +1,48 @@
+{% extends 'base_back.html.twig' %}
+
+{% block title %}Liste des Commandes by ID {% endblock %}
+
+{% block body %}
+<h1>Details  Commandes </h1>
+
+
+
+
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+                <th>Nom  Client</th>
+            <th>Prenom  Client</th>
+            <th>Date Commande</th>
+           
+            <th>Totale Commande</th>
+            <th>Remise</th>
+            <th>État</th>
+            <th>address</th>
+   
+                <th>Action</th>
+         
+        </tr>
+    </thead>
+    <tbody>
+        
+            <tr>
+                  <td>{{ commande.utilisateur.nom }}</td>
+                 <td>{{ commande.utilisateur.prenom }}</td>
+                <td>{{ commande.dateCommande|date('Y-m-d') }}</td>
+     
+                <td>{{ commande.totaleCommande }}</td>
+                <td>{{ commande.remise }}</td>
+                <td>{{ commande.etat }}</td>
+                <td>{{ commande.address }}</td>
+           
+                 <td>
+               
+<a href="{{ path('commande_pdf', {'id': commande.id}) }}" class="btn btn-primary">PDF</a>
+
+                </td>
+            </tr>
+    
+    </tbody>
+</table>
+{% endblock %}
